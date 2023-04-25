@@ -1,0 +1,16 @@
+type: framework
+content:
+- Run the code
+- Blocking requests
+- Aggregation
+- Callbacks
+- Retrofit callback API
+- Suspending functions
+- Coroutines
+- Concurrency
+- Structured concurrency
+- Canceling
+- Outer scope
+- Showing progress
+- Channels
+- Testing
