@@ -18,7 +18,9 @@ fun loadContributorsCallbacks(service: GitHubService, req: RequestData, updateRe
         for (repo in repos) {
             service.getRepoContributorsCall(req.org, repo.name)
                 .onResponse { responseUsers ->
-                    // processing repository
+                    logUsers(repo, responseUsers)
+                    val users = responseUsers.bodyList()
+                    allUsers += users
                     countDownLatch.countDown()
                 }
         }
