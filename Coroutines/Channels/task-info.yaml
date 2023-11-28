@@ -1,86 +1,88 @@
 type: edu
 files:
-- name: resources/logback.xml
-  visible: false
-- name: resources/ajax-loader.gif
-  visible: false
-- name: src/tasks/Aggregation.kt
-  visible: true
-- name: src/tasks/Request4Suspend.kt
-  visible: true
-- name: src/tasks/Request1Blocking.kt
-  visible: true
-- name: src/tasks/Request6Progress.kt
-  visible: true
-- name: src/tasks/Request7Channels.kt
-  visible: true
-  placeholders:
-  - offset: 344
-    length: 665
-    placeholder_text: TODO()
-- name: src/tasks/Request3Callbacks.kt
-  visible: true
-- name: src/tasks/Request2Background.kt
-  visible: true
-- name: src/tasks/Request5Concurrent.kt
-  visible: true
-- name: src/tasks/Request5NotCancellable.kt
-  visible: true
-- name: src/samples/SamplesLogger.kt
-  visible: true
-- name: src/samples/ChannelsSample.kt
-  visible: true
-- name: src/samples/ConcurrencySample.kt
-  visible: true
-- name: src/contributors/main.kt
-  visible: true
-- name: src/contributors/Logger.kt
-  visible: true
-- name: src/contributors/Params.kt
-  visible: true
-- name: src/contributors/Contributors.kt
-  visible: true
-- name: src/contributors/GitHubService.kt
-  visible: true
-- name: src/contributors/ContributorsUI.kt
-  visible: true
-- name: build.gradle
-  visible: true
-- name: gradle.properties
-  visible: true
-- name: settings.gradle
-  visible: true
-- name: test/tasks/AggregationKtTest.kt
-  visible: true
-- name: test/tasks/Request4SuspendKtTest.kt
-  visible: true
-- name: test/tasks/Request1BlockingKtTest.kt
-  visible: true
-- name: test/tasks/Request6ProgressKtTest.kt
-  visible: true
-- name: test/tasks/Request3CallbacksKtTest.kt
-  visible: true
-- name: test/tasks/Request5ConcurrentKtTest.kt
-  visible: true
-- name: test/contributors/testData.kt
-  visible: true
-- name: test/contributors/MockGithubService.kt
-  visible: true
-- name: test/tasks/Request7ChannelsKtTest.kt
-  visible: true
-- name: images/progress.png
-  visible: false
-- name: images/progress-and-concurrency.png
-  visible: false
-- name: images/using-channel.png
-  visible: false
-- name: images/using-channel-many-coroutines.png
-  visible: false
-- name: images/unlimited-channel.png
-  visible: false
-- name: images/rendezvous-channel.png
-  visible: false
-- name: images/buffered-channel.png
-  visible: false
-- name: images/conflated-channel.gif
-  visible: false
+  - name: resources/logback.xml
+    visible: false
+  - name: resources/ajax-loader.gif
+    visible: false
+  - name: src/tasks/Aggregation.kt
+    visible: true
+  - name: src/tasks/Request4Suspend.kt
+    visible: true
+  - name: src/tasks/Request1Blocking.kt
+    visible: true
+  - name: src/tasks/Request6Progress.kt
+    visible: true
+  - name: src/tasks/Request7Channels.kt
+    visible: true
+    placeholders:
+      - offset: 344
+        length: 665
+        placeholder_text: TODO()
+  - name: src/tasks/Request3Callbacks.kt
+    visible: true
+  - name: src/tasks/Request2Background.kt
+    visible: true
+  - name: src/tasks/Request5Concurrent.kt
+    visible: true
+  - name: src/tasks/Request5NotCancellable.kt
+    visible: true
+  - name: src/samples/SamplesLogger.kt
+    visible: true
+  - name: src/samples/ChannelsSample.kt
+    visible: true
+  - name: src/samples/ConcurrencySample.kt
+    visible: true
+  - name: src/contributors/main.kt
+    visible: true
+  - name: src/contributors/Logger.kt
+    visible: true
+  - name: src/contributors/Params.kt
+    visible: true
+  - name: src/contributors/Contributors.kt
+    visible: true
+  - name: src/contributors/GitHubService.kt
+    visible: true
+  - name: src/contributors/ContributorsUI.kt
+    visible: true
+  - name: build.gradle
+    visible: true
+  - name: gradle.properties
+    visible: true
+  - name: settings.gradle
+    visible: true
+  - name: test/tasks/AggregationKtTest.kt
+    visible: true
+  - name: test/tasks/Request4SuspendKtTest.kt
+    visible: true
+  - name: test/tasks/Request1BlockingKtTest.kt
+    visible: true
+  - name: test/tasks/Request6ProgressKtTest.kt
+    visible: true
+  - name: test/tasks/Request3CallbacksKtTest.kt
+    visible: true
+  - name: test/tasks/Request5ConcurrentKtTest.kt
+    visible: true
+  - name: test/contributors/testData.kt
+    visible: true
+  - name: test/contributors/MockGithubService.kt
+    visible: true
+  - name: test/tasks/Request7ChannelsKtTest.kt
+    visible: true
+  - name: images/progress.png
+    visible: false
+  - name: images/progress-and-concurrency.png
+    visible: false
+  - name: images/using-channel.png
+    visible: false
+  - name: images/using-channel-many-coroutines.png
+    visible: false
+  - name: images/unlimited-channel.png
+    visible: false
+  - name: images/rendezvous-channel.png
+    visible: false
+  - name: images/buffered-channel.png
+    visible: false
+  - name: images/conflated-channel.gif
+    visible: false
+  - name: test/tasks/Request2BackgroundKtTest.kt
+    visible: true
