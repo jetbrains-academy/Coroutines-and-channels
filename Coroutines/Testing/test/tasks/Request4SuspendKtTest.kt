@@ -20,7 +20,6 @@ class Request4SuspendKtTest {
         Assert.assertEquals("Wrong result for 'loadContributorsSuspend'", expectedResults.users, result)
         val totalTime = currentTime - startTime
 
-        // TODO: uncomment this assertion
         Assert.assertEquals(
             "The calls run consequently, so the total virtual time should be 4000 ms: " +
                     "1000 for repos request plus (1000 + 1200 + 800) = 3000 for sequential contributors requests)",

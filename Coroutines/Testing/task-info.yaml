@@ -64,7 +64,7 @@ files:
         length: 11
         placeholder_text: System.currentTimeMillis()
       - offset: 779
-        length: 341
+        length: 299
         placeholder_text: |-
           /*
                   // TODO: uncomment this assertion
@@ -92,7 +92,7 @@ files:
         length: 11
         placeholder_text: System.currentTimeMillis()
       - offset: 755
-        length: 201
+        length: 155
         placeholder_text: |-
           /*
                       // TODO: uncomment this assertion
@@ -115,7 +115,7 @@ files:
         length: 11
         placeholder_text: System.currentTimeMillis()
       - offset: 725
-        length: 231
+        length: 185
         placeholder_text: |-
           /*
                       // TODO: uncomment this assertion
@@ -134,13 +134,13 @@ files:
         length: 7
         placeholder_text: runBlocking
       - offset: 574
-        length: 51
-        placeholder_text: System.currentTimeMillis()
-      - offset: 872
         length: 11
         placeholder_text: System.currentTimeMillis()
-      - offset: 896
-        length: 358
+      - offset: 820
+        length: 11
+        placeholder_text: System.currentTimeMillis()
+      - offset: 844
+        length: 316
         placeholder_text: |-
           /*
                   // TODO: uncomment this assertion

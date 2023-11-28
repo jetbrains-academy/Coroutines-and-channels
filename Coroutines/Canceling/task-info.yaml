@@ -21,14 +21,14 @@ files:
   - name: src/tasks/Request5Concurrent.kt
     visible: true
     placeholders:
-      - offset: 459
+      - offset: 538
         length: 13
         placeholder_text: //delay(3000)
   - name: src/tasks/Request5NotCancellable.kt
     visible: true
     placeholders:
       - offset: 211
-        length: 505
+        length: 584
         placeholder_text: TODO()
   - name: src/samples/SamplesLogger.kt
     visible: true

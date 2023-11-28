@@ -22,7 +22,6 @@ class Request6ProgressKtTest {
             val expected = progressResults[index++]
             val time = currentTime - startTime
 
-            // TODO: uncomment this assertion
             Assert.assertEquals("Expected intermediate result after virtual ${expected.timeFromStart} ms:",
                 expected.timeFromStart, time)
 
