@@ -13,7 +13,6 @@ suspend fun loadContributorsNotCancellable(service: GitHubService, req: RequestD
     val deferreds: List<Deferred<List<User>>> = repos.map { repo ->
         GlobalScope.async(Dispatchers.Default) {
             log("starting loading for ${repo.name}")
-            //delay(3000)
             service.getRepoContributors(req.org, repo.name)
                 .also { logUsers(repo, it) }
                 .bodyList()
