@@ -1,4 +1,4 @@
-type: edu
+type: theory
 files:
   - name: resources/logback.xml
     visible: false
@@ -20,16 +20,8 @@ files:
     visible: true
   - name: src/tasks/Request5Concurrent.kt
     visible: true
-    placeholders:
-      - offset: 538
-        length: 13
-        placeholder_text: //delay(3000)
   - name: src/tasks/Request5NotCancellable.kt
     visible: true
-    placeholders:
-      - offset: 211
-        length: 584
-        placeholder_text: TODO()
   - name: src/samples/SamplesLogger.kt
     visible: true
   - name: src/samples/ChannelsSample.kt
@@ -54,17 +46,5 @@ files:
     visible: true
   - name: settings.gradle
     visible: true
-  - name: test/tasks/AggregationKtTest.kt
-    visible: true
-  - name: test/tasks/Request4SuspendKtTest.kt
-    visible: true
-  - name: test/tasks/Request1BlockingKtTest.kt
-    visible: true
-  - name: test/tasks/Request3CallbacksKtTest.kt
-    visible: true
-  - name: test/tasks/Request5ConcurrentKtTest.kt
-    visible: true
-  - name: test/contributors/testData.kt
-    visible: true
-  - name: test/contributors/MockGithubService.kt
-    visible: true
+  - name: runConfigurations/MainKt-Canceling.run.xml
+    visible: false
