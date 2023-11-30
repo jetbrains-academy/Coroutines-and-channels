@@ -1,4 +1,4 @@
-#### Consecutive vs concurrent
+## Consecutive vs concurrent
 
 An `updateResults()` callback is called after each request is completed:
 
@@ -103,23 +103,22 @@ val unlimitedChannel = Channel<String>(UNLIMITED)
 
 By default, a "Rendezvous" channel is created.
 
-In the following task, you'll create a "Rendezvous" channel, two producer coroutines, and a consumer coroutine. Check out [ChannelsSample.kt](course://Coroutines/Channels/src/samples/ChannelsSample.kt)
+In the following task, you'll create a "Rendezvous" channel, two producer coroutines, and a consumer coroutine. Check out [src/samples/ChannelsSample.kt](course://Coroutines/Channels/src/samples/ChannelsSample.kt)
 
 <div class="hint">
 
-> Watch [this video](https://www.youtube.com/watch?v=HpWQUoVURWQ) for a better understanding of channels.
->
+> Watch <a href="https://www.youtube.com/watch?v=HpWQUoVURWQ" target="_blank">this video</a> for a better understanding of channels.
 
 </div>
 
 
-### Task
+### Task condition
 
 In [src/tasks/Request7Channels.kt](course://Coroutines/Channels/src/tasks/Request7Channels.kt), implement the function `loadContributorsChannels()` that requests all of the GitHub
 contributors concurrently and shows intermediate progress at the same time.
 
-Use the previous functions, `loadContributorsConcurrent()` from [Request5Concurrent.kt](course://Coroutines/Channels/src/tasks/Request5Concurrent.kt)
-and `loadContributorsProgress()` from [Request6Progress.kt](course://Coroutines/Channels/src/tasks/Request6Progress.kt).
+Use the previous functions, `loadContributorsConcurrent()` from [src/tasks/Request5Concurrent.kt](course://Coroutines/Channels/src/tasks/Request5Concurrent.kt)
+and `loadContributorsProgress()` from [src/tasks/Request6Progress.kt](course://Coroutines/Channels/src/tasks/Request6Progress.kt).
 
 
 <div class="hint"> 
@@ -149,3 +148,5 @@ repeat(repos.size) {
 
 Since the `receive()` calls are sequential, no additional synchronization is needed.
 </div>
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#channels)

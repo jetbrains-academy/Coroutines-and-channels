@@ -23,6 +23,8 @@ Open [src/tasks/Request3Callbacks.kt](course://Coroutines/Retrofit callback API/
 However, the provided solution doesn't work. If you run the program and load contributors by choosing the _CALLBACKS_
 option, you'll see that nothing is shown. However, the tests that immediately return the result pass.
 
-### Task
+### Task condition
 
 Rewrite the code in the [src/tasks/Request3Callbacks.kt](course://Coroutines/Retrofit callback API/src/tasks/Request3Callbacks.kt) file so that the loaded list of contributors is shown.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#use-the-retrofit-callback-api)

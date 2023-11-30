@@ -58,11 +58,11 @@ despite all the requests taking place on the main UI thread:
     11252 [AWT-EventQueue-0 @coroutine#1] INFO  Contributors - kotlin-coroutines-workshop: loaded 1 contributors
     ```
 
-2. The log can show you which coroutine the corresponding code is running on. To enable it, open **Run | Edit configurations**
+2. The log can show you which coroutine the corresponding code is running on. For the configuration invoked by clicking `Run` button this is already set up. To enable it in your own configurations, open **Run | Edit configurations**
    and add the `-Dkotlinx.coroutines.debug` VM option:
 
 
-   ![Edit run configuration](images/run-configuration.png) &shortcut:ChooseRunConfiguration;
+   ![Edit run configuration](images/run-configuration.png)
 
    The coroutine name will be attached to the thread name while `main()` is run with this option. You can also
    modify the template for running all of the Kotlin files and enable this option by default.
@@ -73,3 +73,5 @@ written sequentially. The new request is sent only when the previous result is r
 
 Suspending functions treat the thread fairly and don't block it for "waiting". However, this doesn't yet bring any concurrency
 into the picture.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#coroutines)

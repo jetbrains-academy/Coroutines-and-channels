@@ -1,15 +1,14 @@
-Create two versions of the function that loads the list of contributors. Compare how both versions behave when you try to
-cancel the parent coroutine. The first version will use `coroutineScope` to start all of the child coroutines,
-whereas the second will use `GlobalScope`.
+Look at two versions of the function that loads the list of contributors. Compare how both versions behave when you try to
+cancel the parent coroutine. The first version is using `coroutineScope` to start all of the child coroutines,
+whereas the second is using `GlobalScope`.
 
-1. In [Request5Concurrent.kt](course://Coroutines/Canceling/src/tasks/Request5Concurrent.kt), add a 3-second delay to the `loadContributorsConcurrent()` function.
+1. In [src/tasks/Request5Concurrent.kt](course://Coroutines/Canceling/src/tasks/Request5Concurrent.kt), uncomment 3-second delay in the `loadContributorsConcurrent()` function.
 
    The delay affects all of the coroutines that send requests, so that there's enough time to cancel the loading
    after the coroutines are started but before the requests are sent.
 
-2. Create the second version of the loading function: copy the implementation of `loadContributorsConcurrent()` to
-   `loadContributorsNotCancellable()` in [Request5NotCancellable.kt](course://Coroutines/Canceling/src/tasks/Request5NotCancellable.kt) and then remove the creation of a new `coroutineScope`.
-3. The `async` calls now fail to resolve, so start them by using `GlobalScope.async`:
+2. Look at the second version of the loading function: `loadContributorsNotCancellable()` in [src/tasks/Request5NotCancellable.kt](course://Coroutines/Canceling/src/tasks/Request5NotCancellable.kt)
+3. It is using `GlobalScope.async`:
 
     ```kotlin
     suspend fun loadContributorsNotCancellable(
@@ -30,7 +29,7 @@ whereas the second will use `GlobalScope`.
   * All of the "contributors" coroutines are started inside the `GlobalScope`, not as children of the coroutine scope
     (line `#2`).
 
-4. Run the program and choose the _CONCURRENT_ option to load the contributors.
+4. Run the program and choose the `CONCURRENT` option to load the contributors.
 5. Wait until all of the "contributors" coroutines are started, and then click _Cancel_. The log shows no new results,
    which means that all of the requests were indeed canceled:
 
@@ -59,7 +58,7 @@ whereas the second will use `GlobalScope`.
 
    In this case, no coroutines are canceled, and all the requests are still sent.
 
-7. Check how the cancellation is triggered in the [Contributors.kt](course://Coroutines/Canceling/src/contributors/Contributors.kt). When the _Cancel_ button is clicked,
+7. Check how the cancellation is triggered in the [src/contributors/Contributors.kt](course://Coroutines/Canceling/src/contributors/Contributors.kt). When the _Cancel_ button is clicked,
    the main "loading" coroutine is explicitly canceled and the child coroutines are canceled automatically.
 
 The `launch` function returns an instance of `Job`. `Job` stores a reference to the "loading coroutine", which loads
@@ -79,3 +78,5 @@ job.setUpCancellation()
 
 With structured concurrency, you only need to cancel the parent coroutine and this automatically propagates cancellation
 to all of the child coroutines.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#canceling-the-loading-of-contributors)

@@ -41,7 +41,9 @@ which uses callbacks instead of blocking calls.
 However, if you try to load the contributors via the `BACKGROUND` option, you can see that the list is updated but
 nothing changes.
 
-### Task
+### Task condition
 
 Fix the `loadContributorsBackground()` function in [src/tasks/Request2Background.kt](course://Coroutines/Callbacks/src/tasks/Request2Background.kt) so that the resulting list is shown
 in the UI.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#callbacks)

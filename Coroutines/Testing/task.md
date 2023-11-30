@@ -16,8 +16,8 @@ The concurrent solution should take around 2200 ms (2200 = 1000 + max(1000, 1200
 
 For the solutions that show progress, you can also check the intermediate results with timestamps.
 
-The corresponding test data is defined in [test/contributors/testData.kt](course://Coroutines/Testing/test/contributors/testData.kt), and the files [Request4SuspendKtTest.kt](course://Coroutines/Testing/test/tasks/Request4SuspendKtTest.kt),
-[Request7ChannelsKtTest.kt](course://Coroutines/Testing/test/tasks/Request7ChannelsKtTest.kt), and so on contain the straightforward tests that use mock service calls.
+The corresponding test data is defined in [test/contributors/testData.kt](course://Coroutines/Testing/test/contributors/testData.kt), and the files [test/tasks/Request4SuspendKtTest.kt](course://Coroutines/Testing/test/tasks/Request4SuspendKtTest.kt),
+[test/tasks/Request7ChannelsKtTest.kt](course://Coroutines/Testing/test/tasks/Request7ChannelsKtTest.kt), and so on contain the straightforward tests that use mock service calls.
 
 However, there are two problems here:
 
@@ -39,7 +39,7 @@ the `delay` will return immediately and advance the virtual time.
 Tests that use this mechanism run fast, but you can still check what happens at different moments in virtual time. The
 total running time drastically decreases:
 
-![Comparison for total running time](images/time-comparison.png){width=700}
+![Comparison for total running time](images/time-comparison.png)
 
 To use virtual time, replace the `runBlocking` invocation with a `runTest`. `runTest` takes an
 extension lambda to `TestScope` as an argument.
@@ -101,9 +101,7 @@ inherited context, without modifying it using the `Dispatchers.Default` dispatch
 You can specify the context elements like the dispatcher when _calling_ a function rather than when _defining_ it,
 which allows for more flexibility and easier testing.
 
-> The testing API that supports virtual time is [Experimental](components-stability.md) and may change in the future.
->
-{type="warning"}
+> The testing API that supports virtual time is [Experimental](https://kotlinlang.org/docs/components-stability.html) and may change in the future.
 
 By default, the compiler shows warnings if you use the experimental testing API. To suppress these warnings, annotate
 the test function or the whole class containing the tests with `@OptIn(ExperimentalCoroutinesApi::class)`.
@@ -119,13 +117,29 @@ compileTestKotlin {
 
 In the project corresponding to this tutorial, the compiler argument has already been added to the Gradle script.
 
-### Task
+### Task condition
 
 Refactor the following tests in [tests/tasks/](course://Coroutines/Testing/test/tasks/) to use virtual time instead of real time:
 
-* Request4SuspendKtTest.kt
-* Request5ConcurrentKtTest.kt
-* Request6ProgressKtTest.kt
-* Request7ChannelsKtTest.kt
+* [Request4SuspendKtTest.kt](course://Coroutines/Testing/test/tasks/Request4SuspendKtTest.kt)
+* [Request5ConcurrentKtTest.kt](course://Coroutines/Testing/test/tasks/Request5ConcurrentKtTest.kt)
+* [Request6ProgressKtTest.kt](course://Coroutines/Testing/test/tasks/Request6ProgressKtTest.kt)
+* [Request7ChannelsKtTest.kt](course://Coroutines/Testing/test/tasks/Request7ChannelsKtTest.kt)
 
-Compare the total running times before and after applying your refactoring.
+<div class="hint">
+
+1. Replace the `runBlocking` invocation with `runTest`, and replace `System.currentTimeMillis()` with `currentTime`:
+    ```kotlin
+    @Test
+    fun test() = runTest {
+        val startTime = currentTime
+        // action
+        val totalTime = currentTime - startTime
+        // testing result
+    }
+    ```
+2. Don't forget to add `@UseExperimental(ExperimentalCoroutinesApi::class)`.
+ 
+</div>
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#testing-coroutines)

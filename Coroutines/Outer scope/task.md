@@ -38,3 +38,4 @@ top-level coroutine. All the nested coroutines then inherit the context and modi
   > you need to run the code on a different thread.
 </div>
 
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#using-the-outer-scope-s-context)
