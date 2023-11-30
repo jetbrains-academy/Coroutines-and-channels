@@ -19,6 +19,6 @@ class Request2BackgroundKtTest {
             resultsUpdated = true
         }
         delay(1000) // Enough, since requests through the MockGithubService in this task do not simulate delay
-        Assert.assertTrue("loadContributorsBackground function should update results", resultsUpdated)
+        Assert.assertEquals("loadContributorsBackground function should update results", true, resultsUpdated)
     }
 }

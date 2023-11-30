@@ -28,6 +28,6 @@ class Request7ChannelsKtTest {
         }
 
         delay(1000) // Enough, since requests through the MockGithubService uses virtual time in delay
-        Assert.assertTrue("loadContributorsChannels function should update results", resultUpdated)
+        Assert.assertEquals("loadContributorsChannels function should update results", true, resultUpdated)
     }
 }

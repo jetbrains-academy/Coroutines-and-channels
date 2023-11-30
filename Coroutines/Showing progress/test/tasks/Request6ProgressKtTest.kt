@@ -29,6 +29,6 @@ class Request6ProgressKtTest {
         }
 
         delay(1000) // Enough, since requests through the MockGithubService uses virtual time in delay
-        Assert.assertTrue("loadContributorsProgress function should update results", progressUpdated)
+        Assert.assertEquals("loadContributorsProgress function should update results", true, progressUpdated)
     }
 }
