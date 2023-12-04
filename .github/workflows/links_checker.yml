@@ -3,9 +3,9 @@ name: LinksChecker
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-#    branches: [ "master" ]
+#    branches: [ "main" ]
 #  pull_request:
-#    branches: [ "master" ]
+#    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,6 +18,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Call action jetbrains-academy/links-checker-action
-        uses: jetbrains-academy/links-checker-action@master
+        uses: jetbrains-academy/links-checker-action@main
         with:
           dir: ./
