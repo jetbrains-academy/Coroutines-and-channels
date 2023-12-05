@@ -117,7 +117,7 @@ compileTestKotlin {
 
 In the project corresponding to this tutorial, the compiler argument has already been added to the Gradle script.
 
-### Task condition
+## Task
 
 Refactor the following tests in [tests/tasks/](course://Coroutines/Testing/test/tasks/) to use virtual time instead of real time:
 
