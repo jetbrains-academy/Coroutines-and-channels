@@ -54,3 +54,9 @@ files:
     visible: false
   - name: runConfigurations/MainKt-Coroutines.run.xml
     visible: false
+  - name: images/suspension-process_dark.gif
+    visible: false
+  - name: images/suspend-requests_dark.png
+    visible: false
+  - name: images/run-configuration_dark.png
+    visible: false
