@@ -1,4 +1,3 @@
-### Task condition
 This task helps you familiarize yourself with the task domain. Currently, each contributor's name is repeated
 several times, once for every project they have taken part in. Implement the `aggregate()` function combining the users
 so that each contributor is added only once. The `User.contributions` property should contain the total number of
@@ -13,7 +12,7 @@ The corresponding test file [test/tasks/AggregationKtTest.kt](course://Coroutine
 <div class="hint">
 
 > You can jump between the source code and the test class automatically by using the [IntelliJ IDEA shortcut](https://www.jetbrains.com/help/idea/create-tests.html#test-code-navigation)
-> `Ctrl+Shift+T` / ⇧ ⌘ T
+> &shortcut:GotoTest;
 
 </div>
 

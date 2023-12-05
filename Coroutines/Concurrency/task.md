@@ -34,7 +34,7 @@ can be sent before the result for the previous one is received:
 The total loading time is approximately the same as in the _CALLBACKS_ version, but it doesn't need any callbacks.
 What's more, `async` explicitly emphasizes which parts run concurrently in the code.
 
-### Task condition
+## Task
 
 In the [src/tasks/Request5Concurrent.kt](course://Coroutines/Concurrency/src/tasks/Request5Concurrent.kt) file, implement a `loadContributorsConcurrent()` function by using the
 previous `loadContributorsSuspend()` function.

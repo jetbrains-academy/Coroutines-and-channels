@@ -20,7 +20,7 @@ provided, and it is possible to check for errors manually. This tutorial uses th
 
 See the new declarations `getOrgRepos` and `getRepoContributors` in [src/contributors/GitHubService.kt](course://Coroutines/Suspending functions/src/contributors/GitHubService.kt)
 
-### Task condition
+## Task
 
 Your task is to change the code of the function that loads contributors to make use of two new suspending functions,
 `getOrgRepos()` and `getRepoContributors()`. The new `loadContributorsSuspend()` function is marked as `suspend` to use the

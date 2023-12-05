@@ -112,7 +112,7 @@ In the following task, you'll create a "Rendezvous" channel, two producer corout
 </div>
 
 
-### Task condition
+## Task
 
 In [src/tasks/Request7Channels.kt](course://Coroutines/Channels/src/tasks/Request7Channels.kt), implement the function `loadContributorsChannels()` that requests all of the GitHub
 contributors concurrently and shows intermediate progress at the same time.

@@ -39,7 +39,7 @@ launch(Dispatchers.Default) {
 * `updateResults()` callback takes an additional Boolean parameter as an argument specifying whether the loading has
   completed and the results are final.
 
-### Task condition
+## Task
 
 In the [src/tasks/Request6Progress.kt](course://Coroutines/Showing progress/src/tasks/Request6Progress.kt) file, implement the `loadContributorsProgress()` function that shows the intermediate
 progress. Base it on the `loadContributorsSuspend()` function from [src/tasks/Request4Suspend.kt](course://Coroutines/Showing progress/src/tasks/Request4Suspend.kt).

@@ -62,7 +62,7 @@ despite all the requests taking place on the main UI thread:
    and add the `-Dkotlinx.coroutines.debug` VM option:
 
 
-   ![Edit run configuration](images/run-configuration.png)
+   ![Edit run configuration](images/run-configuration.png) &shortcut:ChooseRunConfiguration;
 
    The coroutine name will be attached to the thread name while `main()` is run with this option. You can also
    modify the template for running all of the Kotlin files and enable this option by default.
