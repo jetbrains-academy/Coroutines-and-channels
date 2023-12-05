@@ -159,4 +159,4 @@ files:
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
   - name: images/time-comparison_dark.png
-    visible: true
+    visible: false

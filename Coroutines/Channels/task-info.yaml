@@ -86,3 +86,19 @@ files:
     visible: false
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
+  - name: images/conflated-channel_dark.gif
+    visible: false
+  - name: images/using-channel-many-coroutines_dark.png
+    visible: false
+  - name: images/progress_dark.png
+    visible: false
+  - name: images/progress-and-concurrency_dark.png
+    visible: false
+  - name: images/using-channel_dark.png
+    visible: false
+  - name: images/unlimited-channel_dark.png
+    visible: false
+  - name: images/buffered-channel_dark.png
+    visible: false
+  - name: images/rendezvous-channel_dark.png
+    visible: false

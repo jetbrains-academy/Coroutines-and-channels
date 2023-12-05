@@ -50,3 +50,5 @@ files:
     visible: false
   - name: runConfigurations/MainKt-Blocking_requests.run.xml
     visible: false
+  - name: images/blocking_dark.png
+    visible: false

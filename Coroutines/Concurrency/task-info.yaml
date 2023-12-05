@@ -65,6 +65,8 @@ files:
   - name: test/tasks/Request5ConcurrentKtTest.kt
     visible: true
   - name: images/concurrency.png
-    visible: true
+    visible: false
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
+  - name: images/concurrency_dark.png
+    visible: false
