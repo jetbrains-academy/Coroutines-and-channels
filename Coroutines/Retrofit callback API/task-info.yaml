@@ -73,3 +73,5 @@ files:
     visible: false
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
+  - name: images/callbacks_dark.png
+    visible: false

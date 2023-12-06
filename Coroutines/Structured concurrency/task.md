@@ -58,3 +58,5 @@ When using `GlobalScope.async`, there is no structure that binds several corouti
 Coroutines started from the global scope are all independent – their lifetime is limited only by the lifetime of the
 whole application. It's possible to store a reference to the coroutine started from the global scope and wait for its
 completion or cancel it explicitly, but that won't happen automatically as it would with structured concurrency.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#structured-concurrency)

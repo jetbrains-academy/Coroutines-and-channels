@@ -16,15 +16,15 @@ by calling `Job.join()`.
 depending on what the lambda returns (the last expression inside the lambda is the result).
 
 To get the result of a coroutine, you can call `await()` on the `Deferred` instance. While waiting for the result,
-the coroutine that this `await()` is called from is suspended. See the example in the [ConcurrencySample.kt](course://Coroutines/Concurrency/src/samples/ConcurrencySample.kt). 
+the coroutine that this `await()` is called from is suspended. See the example in the [src/samples/ConcurrencySample.kt](course://Coroutines/Concurrency/src/samples/ConcurrencySample.kt). 
 
 `runBlocking` is used as a bridge between regular and suspending functions, or between the blocking and non-blocking worlds. It works
 as an adaptor for starting the top-level main coroutine. It is intended primarily to be used in `main()` functions and
 tests.
 
-> Watch [this video](https://www.youtube.com/watch?v=zEZc5AmHQhk) for a better understanding of coroutines.
+> Watch <a href="https://www.youtube.com/watch?v=zEZc5AmHQhk" target="_blank">this video</a> for a better understanding of coroutines.
 
-If there is a list of deferred objects, you can call `awaitAll()` to await the results of all of them. See the example in the [ConcurrencySample.kt](course://Coroutines/Concurrency/src/samples/ConcurrencySample.kt)
+If there is a list of deferred objects, you can call `awaitAll()` to await the results of all of them. See the example in the [src/samples/ConcurrencySample.kt](course://Coroutines/Concurrency/src/samples/ConcurrencySample.kt)
 
 When each "contributors" request is started in a new coroutine, all of the requests are started asynchronously. A new request
 can be sent before the result for the previous one is received:
@@ -34,9 +34,9 @@ can be sent before the result for the previous one is received:
 The total loading time is approximately the same as in the _CALLBACKS_ version, but it doesn't need any callbacks.
 What's more, `async` explicitly emphasizes which parts run concurrently in the code.
 
-### Task 5
+## Task
 
-In the [Request5Concurrent.kt](course://Coroutines/Concurrency/src/tasks/Request5Concurrent.kt) file, implement a `loadContributorsConcurrent()` function by using the
+In the [src/tasks/Request5Concurrent.kt](course://Coroutines/Concurrency/src/tasks/Request5Concurrent.kt) file, implement a `loadContributorsConcurrent()` function by using the
 previous `loadContributorsSuspend()` function.
 
 <div class="hint">
@@ -63,3 +63,5 @@ val deferreds: List<Deferred<List<User>>> = repos.map { repo ->
 deferreds.awaitAll() // List<List<User>>
 ```
 </div>
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#concurrency)

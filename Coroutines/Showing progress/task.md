@@ -21,7 +21,7 @@ suspend fun loadContributorsProgress(
 }
 ```
 
-On the call site in [Contributors.kt](course://Coroutines/Showing progress/src/contributors/Contributors.kt), the callback is passed to update the results from the `Main` thread for
+On the call site in [src/contributors/Contributors.kt](course://Coroutines/Showing progress/src/contributors/Contributors.kt), the callback is passed to update the results from the `Main` thread for
 the _PROGRESS_ option:
 
 ```kotlin
@@ -39,13 +39,15 @@ launch(Dispatchers.Default) {
 * `updateResults()` callback takes an additional Boolean parameter as an argument specifying whether the loading has
   completed and the results are final.
 
-### Task
+## Task
 
 In the [src/tasks/Request6Progress.kt](course://Coroutines/Showing progress/src/tasks/Request6Progress.kt) file, implement the `loadContributorsProgress()` function that shows the intermediate
-progress. Base it on the `loadContributorsSuspend()` function from [Request4Suspend.kt](course://Coroutines/Showing progress/src/tasks/Request4Suspend.kt).
+progress. Base it on the `loadContributorsSuspend()` function from [src/tasks/Request4Suspend.kt](course://Coroutines/Showing progress/src/tasks/Request4Suspend.kt).
 
 * Use a simple version without concurrency; you'll add it later in the next section.
 * The intermediate list of contributors should be shown in an "aggregated" state, not just the list of users loaded for
   each repository.
 * The total number of contributions for each user should be increased when the data for each new
   repository is loaded.
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#showing-progress)

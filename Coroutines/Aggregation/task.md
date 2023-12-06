@@ -19,3 +19,5 @@ The corresponding test file [test/tasks/AggregationKtTest.kt](course://Coroutine
 After implementing this task, the resulting list for the "kotlin" organization should be similar to the following:
 
 ![The list for the "kotlin" organization](images/aggregate.png)
+
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#task-1)

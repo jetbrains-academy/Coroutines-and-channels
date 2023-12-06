@@ -33,6 +33,7 @@ This API is used by the `loadContributorsBlocking()` function to fetch the list 
       name in square brackets. You can see from which thread the loading request is called.
     * The final item on each line is the actual message: how many repositories or contributors were loaded.
 
+
    This log output demonstrates that all of the results were logged from the main thread. When you run the code with a _BLOCKING_
    option, the window freezes and doesn't react to input until the loading is finished. All of the requests are executed from
    the same thread as the one called `loadContributorsBlocking()` is from, which is the main UI thread (in Swing, it's an AWT
@@ -49,4 +50,4 @@ This API is used by the `loadContributorsBlocking()` function to fetch the list 
     * Since `loadContributorsBlocking()` is also called from the UI thread, the UI thread becomes blocked and the UI is
       frozen.
 
-
+For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#blocking-requests)

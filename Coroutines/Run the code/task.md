@@ -1,6 +1,6 @@
 The program loads the contributors for all of the repositories under the given organization (named “kotlin” by default). Later you'll add logic to sort the users by the number of their contributions.
 
-Open the [src/contributors/main.kt](course://Coroutines/Run the code/src/contributors/main.kt) file and run the `main()` function. You'll see the following window:
+Open the [src/contributors/main.kt](course://Coroutines/Run the code/src/contributors/main.kt) file and run the `main()` function or just use the "Run" button below. You'll see the following window:
 
 ![First window](images/initial-window.png)
 
