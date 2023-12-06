@@ -8,9 +8,10 @@ summary: |-
   - Why and how to use suspending functions to perform network requests.
   - How to send requests concurrently using coroutines.
   - How to share information between different coroutines using channels.
-  
+
   This course is based on <a href="https://kotlinlang.org/docs/coroutines-and-channels.html">Coroutines and channels tutorial</a>
 programming_language: Kotlin
 content:
-- Before you start
-- Coroutines
+  - Before you start
+  - Coroutines
+  - Feedback survey
