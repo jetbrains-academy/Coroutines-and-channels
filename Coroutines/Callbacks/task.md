@@ -1,14 +1,14 @@
-The previous solution works, but it blocks the thread and therefore freezes the UI. A traditional approach that avoids this
+The previous solution works, but it blocks the thread and therefore freezes the UI. A traditional approach to prevent this
 is to use _callbacks_.
 
-Instead of calling the code that should be invoked right after the operation is completed, you can extract it
-into a separate callback, often a lambda, and pass that lambda to the caller in order for it to be called later.
+Instead of executing the code immediately after the operation is completed, you can extract it
+into a separate callback, often a lambda, and pass that lambda to the caller to be invoked later.
 
-To make the UI responsive, you can either move the whole computation to a separate thread or switch to the Retrofit API
+To make the UI responsive, you can either move the entire computation to a separate thread or switch to the Retrofit API,
 which uses callbacks instead of blocking calls.
 ### Use a background thread
 
-1. Open [src/tasks/Request2Background.kt](course://Coroutines/Callbacks/src/tasks/Request2Background.kt) and see its implementation. First, the whole computation is moved to a different
+1. Open [src/tasks/Request2Background.kt](course://Coroutines/Callbacks/src/tasks/Request2Background.kt) and examine its implementation. First, the entire computation is moved to a different
    thread. The `thread()` function starts a new thread:
 
     ```kotlin
@@ -22,10 +22,10 @@ which uses callbacks instead of blocking calls.
 
    ![The freed main thread](images/background.png)
 
-2. The signature of the `loadContributorsBackground()` function changes. It takes an `updateResults()`
-   callback as the last argument to call it after all the loading completes.
-3. Now when the `loadContributorsBackground()` is called, the `updateResults()` call goes in the callback, not immediately
-   afterward as it did before:
+2. The signature of the `loadContributorsBackground()` function has changed. It now takes an `updateResults()`
+   callback as the last argument to be invoked once all the data has been loaded.
+3. Once the `loadContributorsBackground()` is called, the invokation of  `updateResults()` is moved to the callback, instead of being executed immediately
+   afterward, as was done previously:
 
     ```kotlin
     loadContributorsBackground(service, req) { users ->
@@ -36,14 +36,14 @@ which uses callbacks instead of blocking calls.
     ```
 
    By calling `SwingUtilities.invokeLater`, you ensure that the `updateResults()` call, which updates the results,
-   happens on the main UI thread (AWT event dispatching thread).
+   occurs on the main UI thread (AWT event dispatching thread).
 
-However, if you try to load the contributors via the `BACKGROUND` option, you can see that the list is updated but
-nothing changes.
+However, if you try to load the contributors via the `BACKGROUND` option, you can see that whilethe list is updates,
+there are no visible changes.
 
 ## Task
 
 Fix the `loadContributorsBackground()` function in [src/tasks/Request2Background.kt](course://Coroutines/Callbacks/src/tasks/Request2Background.kt) so that the resulting list is shown
 in the UI.
 
-For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#callbacks)
+For a more detailed description, you can refer to [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#callbacks).
