@@ -1,7 +1,7 @@
-When you start new coroutines inside the given scope, it's much easier to ensure that all of them run with the same
-context. It is also much easier to replace the context if needed.
+When you start new coroutines within a given scope, it becomes much easier to ensure that all of them run within the same
+context. It also simplifies the process of replacing the context if needed.
 
-Now it's time to learn how using the dispatcher from the outer scope works. The new scope created by
+Now, it's time to learn how utilizing the dispatcher from the outer scope works. The new scope created by either 
 the `coroutineScope` or by the coroutine builders always inherits the context from the outer scope. In this case, the
 outer scope is the scope the `suspend loadContributorsConcurrent()` function was called from:
 
@@ -12,8 +12,8 @@ launch(Dispatchers.Default) {  // outer scope
 }
 ```
 
-All of the nested coroutines are automatically started with the inherited context. The dispatcher is a part of this
-context. That's why all of the coroutines started by `async` are started with the context of the default dispatcher:
+All nested coroutines are automatically started with the inherited context, of which the dispatcher is a part.
+That's why all of the coroutines instigated by `async` are started within the context of the default dispatcher:
 
 ```kotlin
 suspend fun loadContributorsConcurrent(
@@ -28,14 +28,14 @@ suspend fun loadContributorsConcurrent(
 }
 ```
 
-With structured concurrency, you can specify the major context elements (like dispatcher) once, when creating the
-top-level coroutine. All the nested coroutines then inherit the context and modify it only if needed.
+With structured concurrency, you can specify major context elements (such as the dispatcher) once, when creating the
+top-level coroutine. All nested coroutines then inherit this context and only modify it as needed.
 
 <div class="hint">
 
-  > When you write code with coroutines for UI applications, for example Android ones, it's a common practice to
-  > use `CoroutineDispatchers.Main` by default for the top coroutine and then to explicitly put a different dispatcher when
-  > you need to run the code on a different thread.
+  > In the context of UI applications using coroutines, such as Android applications, a common practice involves
+  > using `CoroutineDispatchers.Main` as the default for the top coroutine. Then, to run code on a different thread, a different dispatcher is
+  > explicitly assigned.
 </div>
 
-For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#using-the-outer-scope-s-context)
+For a more detailed description, you can refer to [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#using-the-outer-scope-s-context)
