@@ -10,8 +10,14 @@ summary: |-
   - How to share information between different coroutines using channels.
 
   This course is based on <a href="https://kotlinlang.org/docs/coroutines-and-channels.html">Coroutines and channels tutorial</a>
+vendor:
+  name: JetBrains
+  email: support@jetbrains.com
+  url: https://www.jetbrains.com/
 programming_language: Kotlin
 content:
   - Before you start
   - Coroutines
   - Feedback survey
+environment_settings:
+  jvm_language_level: JDK_1_8
