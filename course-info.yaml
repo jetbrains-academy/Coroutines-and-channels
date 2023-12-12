@@ -1,15 +1,13 @@
 type: marketplace
 title: Coroutines and channels
 language: English
-summary: |-
-  In this course, you'll learn how to use coroutines in IntelliJ IDEA to perform network requests without blocking the underlying thread or callbacks.
-  You'll learn:
-
-  - Why and how to use suspending functions to perform network requests.
-  - How to send requests concurrently using coroutines.
-  - How to share information between different coroutines using channels.
-
-  This course is based on <a href="https://kotlinlang.org/docs/coroutines-and-channels.html">Coroutines and channels tutorial</a>
+summary: "In this course, you'll learn how to use coroutines in IntelliJ IDEA to perform\
+  \ network requests without blocking the underlying thread or callbacks. You'll learn:\
+  \ <ul> <li>Why and how to use suspending functions to perform network requests.</li>\
+  \ <li>How to send requests concurrently using coroutines.</li> <li>How to share\
+  \ information between different coroutines using channels.</li> </ul> This course\
+  \ is based on <a href=\"https://kotlinlang.org/docs/coroutines-and-channels.html\"\
+  >Coroutines and channels tutorial</a>"
 vendor:
   name: JetBrains
   email: support@jetbrains.com
