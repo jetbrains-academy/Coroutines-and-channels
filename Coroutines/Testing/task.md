@@ -1,8 +1,8 @@
-Let's now test all solutions to check that the solution with concurrent coroutines is faster than the solution with
-the `suspend` functions, and check that the solution with channels is faster than the simple "progress" one.
+Let's now test all solutions to confirm that the solution with concurrent coroutines is faster than the solution with
+`suspend` functions, and verify that the solution with channels is faster than the simple "progress" one.
 
 In the following task, you'll compare the total running time of the solutions. You'll mock a GitHub service and make
-this service return results after the given timeouts:
+this service return results after specified timeouts:
 
 ```text
 repos request - returns an answer within 1000 ms delay
@@ -11,27 +11,27 @@ repo-2 - 1200 ms delay
 repo-3 - 800 ms delay
 ```
 
-The sequential solution with the `suspend` functions should take around 4000 ms (4000 = 1000 + (1000 + 1200 + 800)).
+The sequential solution with `suspend` functions should take around 4000 ms (4000 = 1000 + (1000 + 1200 + 800)).
 The concurrent solution should take around 2200 ms (2200 = 1000 + max(1000, 1200, 800)).
 
 For the solutions that show progress, you can also check the intermediate results with timestamps.
 
 The corresponding test data is defined in [test/contributors/testData.kt](course://Coroutines/Testing/test/contributors/testData.kt), and the files [test/tasks/Request4SuspendKtTest.kt](course://Coroutines/Testing/test/tasks/Request4SuspendKtTest.kt),
-[test/tasks/Request7ChannelsKtTest.kt](course://Coroutines/Testing/test/tasks/Request7ChannelsKtTest.kt), and so on contain the straightforward tests that use mock service calls.
+[test/tasks/Request7ChannelsKtTest.kt](course://Coroutines/Testing/test/tasks/Request7ChannelsKtTest.kt), and so on, contain straightforward tests that use mock service calls.
 
 However, there are two problems here:
 
 * These tests take too long to run. Each test takes around 2 to 4 seconds, and you need to wait for the results each
   time. It's not very efficient.
 * You can't rely on the exact time the solution runs because it still takes additional time to prepare and run the code.
-  You could add a constant, but then the time would differ from machine to machine. The mock service delays
-  should be higher than this constant so you can see a difference. If the constant is 0.5 sec, making the delays
+  You could add a constant, but then the time would differ from one machine to another. The mock service delays
+  should be greater than this constant so you can see a difference. If the constant is 0.5 sec, setting the delays to
   0.1 sec won't be enough.
 
 A better way would be to use special frameworks to test the timing while running the same code several times (which increases
-the total time even more), but that is complicated to learn and set up.
+the total time even further), but this can be complex to learn and set up.
 
-To solve these problems and make sure that solutions with provided test delays behave as expected, one faster than the other,
+To solve these problems and make sure that solutions with provided test delays behave as expected, with one being faster than the other,
 use _virtual_ time with a special test dispatcher. This dispatcher keeps track of the virtual time passed from
 the start and runs everything immediately in real time. When you run coroutines on this dispatcher,
 the `delay` will return immediately and advance the virtual time.
@@ -41,10 +41,10 @@ total running time drastically decreases:
 
 ![Comparison for total running time](images/time-comparison.png)
 
-To use virtual time, replace the `runBlocking` invocation with a `runTest`. `runTest` takes an
+To use virtual time, replace the `runBlocking` invocation with `runTest`. `runTest` takes an
 extension lambda to `TestScope` as an argument.
-When you call `delay` in a `suspend` function inside this special scope, `delay` will increase the virtual time instead
-of delaying in real time:
+When you call `delay` within a `suspend` function inside this special scope, `delay` will increase the virtual time rather than
+causing a delay in real time:
 
 ```kotlin
 @Test
@@ -65,12 +65,12 @@ suspend fun foo() {
 
 You can check the current virtual time using the `currentTime` property of `TestScope`.
 
-The actual running time in this example is several milliseconds, whereas virtual time equals the delay argument, which
+The actual running time in this example is several milliseconds, whereas the virtual time equals the delay argument, which
 is 1000 milliseconds.
 
-To get the full effect of "virtual" `delay` in child coroutines,
+To get the full effect of the "virtual" `delay` in child coroutines,
 start all of the child coroutines with `TestDispatcher`. Otherwise, it won't work. This dispatcher is
-automatically inherited from the other `TestScope`, unless you provide a different dispatcher:
+automatically inherited from the other `TestScope` unless you provide a different dispatcher:
 
 ```kotlin
 @Test
@@ -142,4 +142,4 @@ Refactor the following tests in [tests/tasks/](course://Coroutines/Testing/test/
  
 </div>
 
-For a more detailed description, you can look at [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#testing-coroutines)
+For a more detailed description, you can refer to [this article](https://kotlinlang.org/docs/coroutines-and-channels.html#testing-coroutines)
