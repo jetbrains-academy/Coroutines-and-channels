@@ -24,7 +24,7 @@ which uses callbacks instead of blocking calls.
 
 2. The signature of the `loadContributorsBackground()` function has changed. It now takes an `updateResults()`
    callback as the last argument to be invoked once all the data has been loaded.
-3. Once the `loadContributorsBackground()` is called, the invokation of  `updateResults()` is moved to the callback, instead of being executed immediately
+3. Once the `loadContributorsBackground()` is called, the invocation of  `updateResults()` is moved to the callback, instead of being executed immediately
    afterward, as was done previously:
 
     ```kotlin
@@ -38,7 +38,7 @@ which uses callbacks instead of blocking calls.
    By calling `SwingUtilities.invokeLater`, you ensure that the `updateResults()` call, which updates the results,
    occurs on the main UI thread (AWT event dispatching thread).
 
-However, if you try to load the contributors via the `BACKGROUND` option, you can see that whilethe list is updates,
+However, if you try to load the contributors via the `BACKGROUND` option, you can see that while the list is updates,
 there are no visible changes.
 
 ## Task
