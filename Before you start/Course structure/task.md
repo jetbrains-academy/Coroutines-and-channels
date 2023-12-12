@@ -23,3 +23,5 @@ The course consists of 14 tasks in each of which you will improve the result of 
 <li>Task 13: Channels</li>
 <li>Task 14: Testing</li> 
 </ul>
+
+Please join the course chat on Discord using the [link](https://discord.gg/RT3PUe4j). There, you can ask questions, interact with instructors, and connect with your fellow students.
