@@ -4,6 +4,7 @@ files:
     visible: false
   - name: resources/ajax-loader.gif
     visible: false
+    is_binary: true
   - name: src/tasks/Aggregation.kt
     visible: true
   - name: src/tasks/Request4Suspend.kt
@@ -70,35 +71,51 @@ files:
     visible: true
   - name: images/progress.png
     visible: false
+    is_binary: true
   - name: images/progress-and-concurrency.png
     visible: false
+    is_binary: true
   - name: images/using-channel.png
     visible: false
+    is_binary: true
   - name: images/using-channel-many-coroutines.png
     visible: false
+    is_binary: true
   - name: images/unlimited-channel.png
     visible: false
+    is_binary: true
   - name: images/rendezvous-channel.png
     visible: false
+    is_binary: true
   - name: images/buffered-channel.png
     visible: false
+    is_binary: true
   - name: images/conflated-channel.gif
     visible: false
+    is_binary: true
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
   - name: images/conflated-channel_dark.gif
     visible: false
+    is_binary: true
   - name: images/using-channel-many-coroutines_dark.png
     visible: false
+    is_binary: true
   - name: images/progress_dark.png
     visible: false
+    is_binary: true
   - name: images/progress-and-concurrency_dark.png
     visible: false
+    is_binary: true
   - name: images/using-channel_dark.png
     visible: false
+    is_binary: true
   - name: images/unlimited-channel_dark.png
     visible: false
+    is_binary: true
   - name: images/buffered-channel_dark.png
     visible: false
+    is_binary: true
   - name: images/rendezvous-channel_dark.png
     visible: false
+    is_binary: true

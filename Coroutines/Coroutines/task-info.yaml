@@ -4,6 +4,7 @@ files:
     visible: false
   - name: resources/ajax-loader.gif
     visible: false
+    is_binary: true
   - name: src/contributors/Contributors.kt
     visible: true
   - name: src/tasks/Aggregation.kt
@@ -48,15 +49,21 @@ files:
     visible: true
   - name: images/suspend-requests.png
     visible: false
+    is_binary: true
   - name: images/suspension-process.gif
     visible: false
+    is_binary: true
   - name: images/run-configuration.png
     visible: false
+    is_binary: true
   - name: runConfigurations/MainKt-Coroutines.run.xml
     visible: false
   - name: images/suspension-process_dark.gif
     visible: false
+    is_binary: true
   - name: images/suspend-requests_dark.png
     visible: false
+    is_binary: true
   - name: images/run-configuration_dark.png
     visible: false
+    is_binary: true

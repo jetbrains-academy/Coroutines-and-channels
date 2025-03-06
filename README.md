@@ -1,8 +1,8 @@
 [![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
-# Kotlin: Coroutines and channels
+# Kotlin: Coroutines and Channels
 
-This course is based on <a href="https://kotlinlang.org/docs/coroutines-and-channels.html">Coroutines and channels tutorial</a>
+This course is based on <a href="https://kotlinlang.org/docs/coroutines-and-channels.html">Coroutines and Channels tutorial</a>
 and explains how to use coroutines in IntelliJ IDEA to perform network requests without blocking the underlying thread or callbacks.
 
 - Why and how to use suspending functions to perform network requests.
