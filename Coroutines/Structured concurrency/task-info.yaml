@@ -4,6 +4,7 @@ files:
     visible: false
   - name: resources/ajax-loader.gif
     visible: false
+    is_binary: true
   - name: src/tasks/Aggregation.kt
     visible: true
   - name: src/tasks/Request4Suspend.kt

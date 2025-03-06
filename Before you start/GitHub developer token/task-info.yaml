@@ -4,5 +4,7 @@ files:
     visible: true
   - name: images/generating-token.png
     visible: false
+    is_binary: true
   - name: images/generating-token_dark.png
     visible: false
+    is_binary: true

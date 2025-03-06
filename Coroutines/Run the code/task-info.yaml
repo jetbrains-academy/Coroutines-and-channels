@@ -4,6 +4,7 @@ files:
     visible: false
   - name: resources/ajax-loader.gif
     visible: false
+    is_binary: true
   - name: src/tasks/Aggregation.kt
     visible: false
   - name: src/tasks/Request4Suspend.kt
@@ -48,5 +49,6 @@ files:
     visible: true
   - name: images/initial-window.png
     visible: false
+    is_binary: true
   - name: runConfigurations/MainKt-Run_the_code.run.xml
     visible: false

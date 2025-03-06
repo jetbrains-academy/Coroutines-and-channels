@@ -1,5 +1,5 @@
 type: marketplace
-title: Coroutines and channels
+title: Coroutines and Channels
 language: English
 summary: "In this course, you'll learn how to use coroutines in IntelliJ IDEA to perform\
   \ network requests without blocking the underlying thread or callbacks. You'll learn:\
@@ -7,7 +7,7 @@ summary: "In this course, you'll learn how to use coroutines in IntelliJ IDEA to
   \ <li>How to send requests concurrently using coroutines.</li> <li>How to share\
   \ information between different coroutines using channels.</li> </ul> This course\
   \ is based on <a href=\"https://kotlinlang.org/docs/coroutines-and-channels.html\"\
-  >Coroutines and channels tutorial</a>"
+  >Coroutines and Channels tutorial</a>"
 vendor:
   name: JetBrains
   email: support@jetbrains.com
@@ -19,3 +19,10 @@ content:
   - Feedback survey
 environment_settings:
   jvm_language_level: JDK_1_8
+additional_files:
+  - name: TODO.txt
+  - name: README.md
+  - name: build.gradle
+  - name: contributing.md
+  - name: settings.gradle
+yaml_version: 2

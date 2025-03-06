@@ -4,6 +4,7 @@ files:
     visible: false
   - name: resources/ajax-loader.gif
     visible: false
+    is_binary: true
   - name: src/tasks/Aggregation.kt
     visible: true
   - name: src/tasks/Request4Suspend.kt
@@ -66,7 +67,9 @@ files:
     visible: true
   - name: images/concurrency.png
     visible: false
+    is_binary: true
   - name: test/tasks/Request2BackgroundKtTest.kt
     visible: true
   - name: images/concurrency_dark.png
     visible: false
+    is_binary: true
